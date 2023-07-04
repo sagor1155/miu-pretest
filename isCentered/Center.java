@@ -10,7 +10,7 @@ public class Center {
 
     public static int isCentered(int[] nums) {
         if (nums.length%2==0) return 0;
-        if (nums.length==1) return 1;
+        if (nums.length==1) return 1; // not necessary
 
         int midIndex = nums.length / 2;
         int midValue = nums[midIndex];
