@@ -6,6 +6,16 @@ public class Fibonacci {
     }
 
     public static int isFibonacci(int n) {
+        if (n <= 0) return 0;
+        int first = 1;
+        int second = 1;
+
+        while (second < n) {
+            int temp = second;
+            second = first + second;
+            first = temp;
+        }
+        if (second == n) return 1;
         return 0;
     }
 }
