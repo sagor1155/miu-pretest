@@ -8,6 +8,11 @@ public class Divisible {
     }
 
     public static int isDivisible(int[] nums, int divisor) {
-        return 0;
+        if (divisor==0) return 0;
+
+        for (int i=0; i<nums.length; i++) {
+            if (nums[i]%divisor != 0) return 0;
+        }
+        return 1;
     }
 }
