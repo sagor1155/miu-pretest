@@ -10,7 +10,7 @@ public class MadhavArray {
         System.out.println(isMadhavArray(new int[]{3,1,2,3,0}));                        // 0
     }
 
-    static int isMadhavArray(int[] a) {
+    static int isMadhavArray1(int[] a) {
         if (a.length < 3) return 0;
         int n = a[0];
         int len = 1;
@@ -22,6 +22,31 @@ public class MadhavArray {
             if (startIndex==a.length) break;
             else if (startIndex+len > a.length) return 0;
 
+            int sum = 0;
+            for (int k=startIndex; k<startIndex+len; k++) {
+                sum += a[k];
+            }
+            if (sum != n) return 0;
+        }
+        return 1;
+    }
+
+
+    static int isMadhavArray(int[] a) {
+        if (a.length < 3) return 0;
+
+        int n = a[0], startIndex = 0, len = 0;
+
+        for (int i=0; i<a.length; i++) {
+            // calculate index & length
+            startIndex = startIndex + len; // (prev index + prev len)  // 0, 1, 3, 6, 10
+            len = i+1;  // 1, 2, 3, 4
+
+            // check index out of bound
+            if (startIndex == a.length) break;
+            else if(startIndex+len > a.length) return 0;
+
+            // calculate sum
             int sum = 0;
             for (int k=startIndex; k<startIndex+len; k++) {
                 sum += a[k];
