@@ -9,6 +9,18 @@ public class ReverseInt {
     }
 
     public static int reverse(int number) {
-        return 0;
+        int sign = 1;
+        if (number < 0) {
+            sign = -1;
+            number = sign * number;
+        }
+
+        int rev = 0;
+        while (number > 0) {
+            int rem = number % 10;
+            rev = rev * 10 + rem;
+            number /= 10;
+        }
+        return rev * sign;
     }
 }
