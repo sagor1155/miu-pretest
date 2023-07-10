@@ -5,6 +5,15 @@ public class UpCount {
     }
 
     public static int upCount(int[] a, int n) {
-        return 0;
+        if (a == null || a.length == 0) return 0;
+
+        int prevPartialSum = 0;
+        int count = 0;
+        for (int i=0; i<a.length; i++) {
+            int sum = prevPartialSum + a[i];
+            if (prevPartialSum <= n && sum > n) count++;
+            prevPartialSum = sum;
+        }
+        return count;
     }
 }
