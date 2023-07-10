@@ -1,8 +1,6 @@
-Find Second Largest Element in An Array
-Write a function that:
-
-accepts an array of non-negative integers
-returns the second largest integer in the array
+Find second-largest Element in An Array:
+Write a function that accepts an array of non-negative integers
+returns the second-largest integer in the array
 return -1 if there is no second largest
 The signature of the function is int findSecondLargest(int[] a):
 

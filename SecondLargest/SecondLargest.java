@@ -10,6 +10,20 @@ public class SecondLargest {
     }
 
     static int secondLargest(int[] a) {
-        return 0;
+        int max = -1;
+        int secondMax = -1;
+
+        for (int i=0; i<a.length; i++) {
+            if (a[i] < 0) return -1;
+
+            if (a[i] > max) {
+                secondMax = max;
+                max = a[i];
+            } else if (a[i] > secondMax && a[i] < max) {
+                secondMax = a[i];
+            }
+        }
+
+        return secondMax;
     }
 }

@@ -1,5 +1,5 @@
 Sum Is Power
-Write a function sumIsPower with signatuare boolean sumIsPower(int[] arr) which outputs:
+Write a function sumIsPower with signature boolean sumIsPower(int[] arr) which outputs:
 
 0 if the input array arr is null
 1 if the sum of the elements in the input array arr is a power of 2
