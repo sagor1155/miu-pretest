@@ -7,6 +7,18 @@ public class SumIsPower {
     }
 
     public static int sumIsPower(int[] nums) {
-        return 0;
+        if (nums == null || nums.length == 0 ) return 0;
+
+        int sum = 0;
+        for (int i=0; i<nums.length; i++) {
+            sum += nums[i];
+        }
+
+        int powOfTwo = 1;
+        while (powOfTwo < sum) {
+            powOfTwo *= 2;
+        }
+
+        return sum == powOfTwo ? 1 : 0;
     }
 }
