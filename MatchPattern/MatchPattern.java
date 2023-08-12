@@ -21,6 +21,7 @@ public class MatchPattern {
                 return 0; // if pattern[k] was never matched (matches==0) or at end of pattern (k==patternLen-1)
             } else { // advance to next pattern character
                 // your code here
+                matches = 0;
                 if (a[i] == pattern[++k]) {
                     matches++;
                 } else {
